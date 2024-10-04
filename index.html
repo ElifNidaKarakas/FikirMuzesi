@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FİKİR MÜZESİ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <header>
+            <img src="Icons/müze-agency-2-1.png" alt="Logo" class="logo"> <!-- Logo burada -->
+            <h1>FİKİR MÜZESİ</h1> <!-- Başlık burada -->
+            <nav>
+                <ul class="menu">
+                    <li><a href="#">Hakkımızda</a></li>
+                    <li><a href="#">İletişim</a></li>
+                    <li><a href="#">Hizmetlerimiz</a></li>
+                    <li><a href="#">Sosyal Medya</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+    </header>
+
+    <section class="slider">
+        <div class="slides">
+            <div class="slide active">
+                <img src="Icons/01.jpg" alt="Slider 1">
+            </div>
+            <div class="slide">
+                <img src="Icons/images.png" alt="Slider 2">
+            </div>
+            <div class="slide">
+                <img src="Icons/eb531görseltasarim.jpg" alt="Slider 3">
+            </div>
+        </div>
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </section>
+    <section class="services">
+        <div class="service">
+            <img src="Icons/typography.png" alt="Logo Tasarımı">
+            <h2>Logo Tasarımı</h2>
+            <p>Markanızı temsil edecek özgün logolar.</p>
+        </div>
+        <div class="service">
+            <img src="Icons/branding.png" alt="Kurumsal Kimlik Tasarımı">
+            <h2>Kurumsal Kimlik Tasarımı</h2>
+            <p>Kurumsal kimliğinizi yansıtan etkili tasarımlar.</p>
+        </div>
+        <div class="service">
+            <img src="Icons/printing.png" alt="Broşür Tasarımı">
+            <h2>Broşür Tasarımı</h2>
+            <p>Tanıtım için profesyonel broşürler.</p>
+        </div>
+        <div class="service">
+            <img src="Icons/catalogDesign.png" alt="Katalog Tasarımı">
+            <h2>Katalog Tasarımı</h2>
+            <p>Ürünlerinizi tanıtıcı katalog tasarımları.</p>
+        </div>
+        <div class="service">
+            <img src="Icons/ux.png" alt="Tabela ve Ekran Tasarımı">
+            <h2>Tabela ve Ekran Tasarımı</h2>
+            <p>Dikkat çeken tabela ve ekran tasarımları.</p>
+        </div>
+        <div class="service">
+            <img src="Icons/mobile.png" alt="Sosyal Medya Tasarımı">
+            <h2>Sosyal Medya Tasarımı</h2>
+            <p>Sosyal medyada markanızı öne çıkarın.</p>
+        </div>
+        <div class="service">
+            <img src="Icons/website-layout.png" alt="Web Tasarımı">
+            <h2>Web Tasarımı</h2>
+            <p>Modern ve kullanıcı dostu web tasarımları.</p>
+        </div>
+        <div class="service">
+            <img src="Icons/photograph.png" alt="Fotoğraf ve Video Çekim">
+            <h2>Fotoğraf ve Video Çekim</h2>
+            <p>Kaliteli fotoğraf ve video hizmetleri.</p>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; Fikir Müzesi</p>
+        <nav>
+            <ul>
+                <li><a href="#">Hakkımızda</a></li>
+                <li><a href="#">İletişim</a></li>
+                <li><a href="#">Hizmetlerimiz</a></li>
+                <li><a href="#">Sosyal Medya</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script>
+        let slideIndex = 0; // Başlangıç slaytı
+        showSlides();
+        
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none"; // Tüm slaytları gizle
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 } // 1'den başla
+            slides[slideIndex - 1].style.display = "block"; // Aktif slaytı göster
+            setTimeout(showSlides, 10000); // 5 saniyede bir slayt değiştir
+        }
+        
+        function changeSlide(n) {
+            slideIndex += n; // Slayt indexini değiştir
+            if (slideIndex > document.getElementsByClassName("slide").length) { slideIndex = 1; }
+            if (slideIndex < 1) { slideIndex = document.getElementsByClassName("slide").length; }
+            showSlides(); // Slaytları güncelle
+        }
+        </script>
+        
+
+</body>
+</html>

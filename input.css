@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh; /* Yüksekliği tam ekran yap */
+    display: flex; /* Flexbox ile merkezleme */
+    justify-content: center; /* Yatay merkezleme */
+    align-items: center; /* Dikey merkezleme */
+    position: relative; /* İçerik konumlandırma için */
+    background-image: url('müze-agency-2-1.png'); /* Arka plan resmi */
+    background-size: cover; /* Resmi tam ekran yap */
+    background-position: center; /* Resmi ortala */
+    background-repeat: no-repeat; /* Resmin tekrar etmesini önler */
+}
+
+.login-container {
+    position: absolute; /* Yazıyı ve butonu arka planın üzerine yerleştir */
+    top: 50%; /* Dikey merkezleme */
+    left: 50%; /* Yatay merkezleme */
+    transform: translate(-50%, -50%); /* Merkezleme için kaydırma */
+    display: flex; /* Flexbox ile yerleşim */
+    flex-direction: column; /* Dikey yerleştir */
+    align-items: center; /* Yatay merkezleme */
+    background-color: rgba(255, 255, 255, 0.8); /* Hafif beyaz arka plan */
+    padding: 30px; /* İç boşluk */
+    border-radius: 10px; /* Yuvarlatılmış köşeler */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Gölgeli efekt */
+}
+
+h1 {
+    margin-bottom: 20px; /* Başlık ile buton arasında boşluk */
+    color: #FF5733; /* Başlık rengi */
+}
+
+button {
+    background-color: #FF5733; /* Buton rengi */
+    color: white; /* Yazı rengi */
+    padding: 15px; /* İç boşluk */
+    border: none; /* Kenarlık yok */
+    border-radius: 5px; /* Yuvarlatılmış köşeler */
+    cursor: pointer; /* İmleç işareti */
+    transition: background-color 0.3s; /* Hover için geçiş efekti */
+    width: 100%; /* Buton genişliği */
+}
+
+button:hover {
+    background-color: #FF3B00; /* Hover rengi */
+}

@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(246, 244, 244);
+    color: #333;
+    padding-bottom: 150px; 
+}
+
+header {
+    background-color: #FF5733;
+    padding: 10px; /* Üst boşluk */
+    color: white;
+    height: 80px; /* Başlık yüksekliği */
+    display: flex;
+    align-items: center; /* Dikey hizalama */
+    position: relative; /* Üst elemanları konumlandırabilmek için */
+}
+
+header img {
+    width: 90px; /* Logonun genişliği */
+    height: auto; /* Oranını korur */
+    margin-right: 20px; /* Logo ile başlık arasında boşluk */
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0;
+    flex-grow: 1; /* Başlık alanını genişletir */
+    text-align: center; /* Başlığı ortada tutar */
+}
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.service {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+    transition: transform 0.3s;
+}
+
+.service:hover {
+    transform: scale(1.05);
+}
+
+.service img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+}
+
+.service h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.service p {
+    font-size: 16px;
+    color: #666;
+}
+.slider {
+    position: relative;
+    width: 100%; /* Slider genişliği tam sayfa */
+    height: 400px; /* İstenilen yükseklik */
+    margin: 20px auto; /* Ortalar */
+    overflow: hidden; /* Taşan içeriği gizler */
+}
+
+.slides {
+    display: flex; /* Slaytları yan yana dizmek için */
+    transition: transform 0.10s ease; /* Geçiş efekti */
+}
+
+.slide {
+    width: 100%; /* Her slaytın genişliği tam sayfa */
+    height: 400px; /* Her slaytın yüksekliği */
+}
+
+.slide img {
+    width: 100%; /* Resmin genişliği */
+    height: 100%; /* Resmin yüksekliği */
+    object-fit: cover; /* Resmi kapsayıcı alanı tam doldurur */
+}
+
+button.prev, button.next {
+    position: absolute; /* Konumlandırmak için */
+    top: 50%; /* Dikey ortalama */
+    transform: translateY(-50%); /* Dikey ortalama */
+    background-color: rgba(255, 255, 255, 0.7); /* Arka plan rengi */
+    border: none; /* Kenarlık yok */
+    padding: 10px; /* İç boşluk */
+    cursor: pointer; /* İmleç işareti */
+    z-index: 10; /* Üstte görünür */
+}
+
+button.prev {
+    left: 10px; /* Solda */
+}
+
+button.next {
+    right: 10px; /* Sağda */
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 1); /* Hover rengi */
+}
+
+
+button.prev, button.next {
+    position: absolute; /* Konumlandırmak için */
+    top: 50%; /* Dikey ortalama */
+    transform: translateY(-50%); /* Dikey ortalama */
+    background-color: rgba(255, 255, 255, 0.7); /* Arka plan rengi */
+    border: none; /* Kenarlık yok */
+    padding: 10px; /* İç boşluk */
+    cursor: pointer; /* İmleç işareti */
+    z-index: 10; /* Üstte görünür */
+}
+
+button.prev {
+    left: 10px; /* Solda */
+}
+
+button.next {
+    right: 10px; /* Sağda */
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 1); /* Hover rengi */
+}
+
+footer {
+    background-color: #333; /* Arka plan rengi */
+    color: white; /* Yazı rengi */
+    text-align: center; /* Metni ortalar */
+    padding: 20px; /* İç boşluk */
+    position: fixed; /* Sayfanın altında sabit kalır */
+    bottom: 0;
+    width: 100%; /* Sayfanın tamamını kaplar */
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2); /* Hafif bir gölge efekti */
+    z-index: 1000; /* Üstte kalmasını sağlar */
+    margin-top: 200px; /* Üst kısmı ile boşluk bırakır */
+}
+
+footer p {
+    margin: 0; /* Varsayılan boşluğu kaldırır */
+    font-size: 14px; /* Yazı boyutu */
+}
+
+nav {
+    margin-top: 10px; /* Üstten boşluk */
+}
+
+nav ul {
+    list-style: none; /* Madde işaretlerini kaldırır */
+    padding: 0; /* İçerideki boşluğu kaldırır */
+}
+
+nav ul li {
+    display: inline; /* Öğeleri yan yana dizmek için */
+    margin: 0 15px; /* Öğeler arasında boşluk */
+}
+
+footer a {
+    color: white; /* Link rengi */
+    text-decoration: none; /* Alt çizgiyi kaldırır */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Üzerine gelindiğinde altı çizilir */
+}
