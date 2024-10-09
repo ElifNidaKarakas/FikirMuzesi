@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -6,25 +7,83 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: rgb(246, 244, 244);
-    color: #333;
-    padding-bottom: 150px; 
+    background-color: white;
+    color: #080707;
+    padding-bottom: 0px; 
 }
 
 header {
-    background-color: #FF5733;
+  
     padding: 10px; /* Üst boşluk */
     color: white;
     height: 80px; /* Başlık yüksekliği */
     display: flex;
     align-items: center; /* Dikey hizalama */
     position: relative; /* Üst elemanları konumlandırabilmek için */
+    border-bottom: 2px solid #ddd; 
 }
 
 header img {
-    width: 90px; /* Logonun genişliği */
+    width: 150px; /* Logonun genişliği */
     height: auto; /* Oranını korur */
-    margin-right: 20px; /* Logo ile başlık arasında boşluk */
+    margin-right: 10px; /* Logo ile başlık arasında boşluk */
+}
+
+header {
+    background-color: white;
+    color: #FF5733;
+    padding: 10px ;
+    text-align: center;
+    font-weight: 700; 
+}
+
+.about {
+    text-align: center; /* Yazıyı ortalar */
+    padding: 30px;
+}
+
+.about h2 {
+    font-size: 2em; /* Başlık boyutu */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.about p {
+    font-size: 1.5em; /* Yazı boyutunu büyüt */
+    font-weight: bold; /* Yazıyı kalın yap */
+    line-height: 1.6;
+    max-width: 800px; /* Maksimum genişlik belirle */
+    margin: 0 auto; /* Ortalamak için */
+}
+
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.menu li {
+    display: inline;
+    margin-right: 5px;
+    margin-left: 90px;
+   
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #0d0d0d;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    text-align: right;
+    
+}
+
+nav ul li a:hover {
+    color: #FF5733; /* Üzerine gelince değişen renk */
+    text-decoration: underline; /* Altı çizgili olur */
 }
 
 h1 {
@@ -43,7 +102,7 @@ h1 {
 }
 
 .service {
-    background-color: white;
+    background-color: rgba(251, 252, 252, 0.922);
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 10px;
@@ -51,10 +110,14 @@ h1 {
     text-align: center;
     width: 300px;
     transition: transform 0.3s;
+    
+
 }
 
 .service:hover {
     transform: scale(1.05);
+    background-color: #aaadb1ba;
+
 }
 
 .service img {
@@ -72,22 +135,29 @@ h1 {
     font-size: 16px;
     color: #666;
 }
+
 .slider {
     position: relative;
     width: 100%; /* Slider genişliği tam sayfa */
     height: 400px; /* İstenilen yükseklik */
     margin: 20px auto; /* Ortalar */
     overflow: hidden; /* Taşan içeriği gizler */
+     
 }
 
 .slides {
     display: flex; /* Slaytları yan yana dizmek için */
     transition: transform 0.10s ease; /* Geçiş efekti */
+ 
 }
 
 .slide {
     width: 100%; /* Her slaytın genişliği tam sayfa */
     height: 400px; /* Her slaytın yüksekliği */
+    margin-right: 90px;
+    margin-left: 90px;
+ 
+    background-size:cover; /* Oranı koruyarak tam dolu görünüm */
 }
 
 .slide img {
@@ -96,28 +166,6 @@ h1 {
     object-fit: cover; /* Resmi kapsayıcı alanı tam doldurur */
 }
 
-button.prev, button.next {
-    position: absolute; /* Konumlandırmak için */
-    top: 50%; /* Dikey ortalama */
-    transform: translateY(-50%); /* Dikey ortalama */
-    background-color: rgba(255, 255, 255, 0.7); /* Arka plan rengi */
-    border: none; /* Kenarlık yok */
-    padding: 10px; /* İç boşluk */
-    cursor: pointer; /* İmleç işareti */
-    z-index: 10; /* Üstte görünür */
-}
-
-button.prev {
-    left: 10px; /* Solda */
-}
-
-button.next {
-    right: 10px; /* Sağda */
-}
-
-button:hover {
-    background-color: rgba(255, 255, 255, 1); /* Hover rengi */
-}
 
 
 button.prev, button.next {
@@ -143,43 +191,157 @@ button:hover {
     background-color: rgba(255, 255, 255, 1); /* Hover rengi */
 }
 
+
+button.prev, button.next {
+    position: absolute; /* Konumlandırmak için */
+    top: 50%; /* Dikey ortalama */
+    transform: translateY(-50%); /* Dikey ortalama */
+    background-color: rgba(255, 255, 255, 0.7); /* Arka plan rengi */
+    border: none; /* Kenarlık yok */
+    padding: 10px; /* İç boşluk */
+    cursor: pointer; /* İmleç işareti */
+    z-index: 10; /* Üstte görünür */
+}
+
+button.prev {
+    left: 10px; /* Solda */
+}
+
+button.next {
+    right: 10px; /* Sağda */
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 1); /* Hover rengi */
+}
+
+/* input.css */
+/* Footer stilleri */
 footer {
-    background-color: #333; /* Arka plan rengi */
-    color: white; /* Yazı rengi */
-    text-align: center; /* Metni ortalar */
-    padding: 20px; /* İç boşluk */
-    position: fixed; /* Sayfanın altında sabit kalır */
-    bottom: 0;
-    width: 100%; /* Sayfanın tamamını kaplar */
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2); /* Hafif bir gölge efekti */
-    z-index: 1000; /* Üstte kalmasını sağlar */
-    margin-top: 200px; /* Üst kısmı ile boşluk bırakır */
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    margin-bottom: 0; /* Alttaki boşluğu sıfırla */
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 footer p {
-    margin: 0; /* Varsayılan boşluğu kaldırır */
-    font-size: 14px; /* Yazı boyutu */
+    font-size: 14px;
+    margin-bottom: 10px;
 }
 
-nav {
-    margin-top: 10px; /* Üstten boşluk */
+.footer-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
 }
 
-nav ul {
-    list-style: none; /* Madde işaretlerini kaldırır */
-    padding: 0; /* İçerideki boşluğu kaldırır */
+.footer-menu li {
+    display: inline;
+    margin-right: 20px;
 }
 
-nav ul li {
-    display: inline; /* Öğeleri yan yana dizmek için */
-    margin: 0 15px; /* Öğeler arasında boşluk */
+.footer-menu li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
-footer a {
-    color: white; /* Link rengi */
-    text-decoration: none; /* Alt çizgiyi kaldırır */
+.footer-menu li a:hover {
+    background-color: #555;
 }
 
-footer a:hover {
-    text-decoration: underline; /* Üzerine gelindiğinde altı çizilir */
+.map-container {
+    margin-top: 30px;
+    font-size: 10px;
 }
+
+.map-container h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.map-container iframe {
+    border: 0;
+    width: 100%;
+    height: 300px;
+    border-radius: 5px;
+}
+.container {
+    font-size: 13px;
+    text-align:center;
+    margin-right: 90px;
+    margin-left: 90px;
+    color:#666;
+    margin:70px;
+
+}
+
+
+.phone, .address {
+    margin: 50px 0; /* Her iki bölüm arasında 10px boşluk */
+}
+
+
+.topic {
+    font-size: 18px;
+    text-align:center;
+    margin-right: 90px;
+    margin-left: 90px;
+    color:#666;
+    margin:70px;
+
+}
+
+.topic h2{
+    font-size: 24px;
+    color: #333;
+}
+
+.phone img{ 
+    width: 50px;
+    height: 50px;
+    margin-bottom: 5px;
+   
+    
+
+}
+.mail img{ 
+    width: 50px;
+    height: 50px;
+    margin-bottom: 5px
+
+}
+
+.adres img{ 
+    width: 50px;
+    height: 50px;
+    margin-bottom: 5px
+
+}
+.iletisim {
+    display: flex;
+    justify-content: space-around; /* İçindeki elemanları eşit aralıklarla yatay olarak düzenler */
+    align-items: center; /* Yüksekliği ortalar */
+    margin-left: 70px;
+    margin-right: 75px;
+    font-size: 12px;
+}
+
+.iletisim .phone,
+.iletisim .adres,
+.iletisim .mail {
+    text-align: center; /* İçeriği ortalar */
+    margin: 0 10px; /* Kenar boşlukları ayarlar */
+   
+}
+
+
+
